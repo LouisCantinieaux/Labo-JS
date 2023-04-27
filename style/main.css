@@ -1,0 +1,35 @@
+/*Eléments principaux du html*/
+header{
+    background-color: black;
+}
+header > p{
+    color: white;
+}
+footer{
+    background-color: black;
+}
+/*CSS sur les listes*/
+.liste{
+    list-style: none;
+
+}
+ul > li{
+    color: white;
+}
+
+/*CSS sur les titres et sous-titres*/
+h1{
+    color: red;
+}
+
+#disclaimer{
+    color: rgba(192, 192, 21, 0.833);
+    text-decoration: underline;
+}
+
+/*CSS sur les Liens*/
+.menu {
+    color: orange;
+    text-decoration: none;
+    /* display: inline-block; */
+}
