@@ -9,9 +9,10 @@ footer{
     background-color: black;
 }
 /*CSS sur les listes*/
-.liste{
+.liste > li{
     list-style: none;
-
+    display: block;
+    margin: 0px;
 }
 ul > li{
     color: white;
@@ -31,5 +32,9 @@ h1{
 .menu {
     color: orange;
     text-decoration: none;
-    /* display: inline-block; */
+    outline: none;
+}
+a{
+    
+    display: block;
 }
