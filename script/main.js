@@ -24,13 +24,6 @@ let tab = []
 let tabRempli = []
 count = 0
 
-titre1.addEventListener("mouseover", function(){
-    // executer mon code lorque je click sur le titre 1
-    auPassage()
-    count ++
-    console.log(count)
-})
-
 valeur1.addEventListener('click', function(){
     auPassage()
     tab.push(valeur1.innerText)
