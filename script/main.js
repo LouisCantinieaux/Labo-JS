@@ -7,6 +7,7 @@ menu[3]="<ul><li>4.1</li><li>4.2</li></ul>";
 const validation = document.getElementById("validation");
 let liste;
 let tabRempli = [];
+
 let index = 0;
 let ligne ="";
 
