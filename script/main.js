@@ -1,14 +1,4 @@
-validation.addEventListener("click", function(){
-    //Envoi dans le local storage
-    localStorage.setItem("maCommande", JSON.stringify(menu));
 
-    //Récupération depuis local storage
-    tabRempli = JSON.parse(localStorage.getItem("maCommande"));
-
-    for(let i = 0; i < tabRempli.length; i++){
-        console.log("élément" + i + " " + tabRempli[i]);
-    }
-})
 
 
 let valeur1 = document.getElementById("valeur-1")
@@ -23,6 +13,18 @@ let validation = document.getElementById("validation")
 let tab = []
 let tabRempli = []
 count = 0
+
+validation.addEventListener("click", function(){
+    //Envoi dans le local storage
+    localStorage.setItem("maCommande", JSON.stringify(tab));
+
+    //Récupération depuis local storage
+    tabRempli = JSON.parse(localStorage.getItem("maCommande"));
+
+    for(let i = 0; i < tabRempli.length; i++){
+        console.log("élément" + i + " " + tabRempli[i]);
+    }
+})
 
 valeur1.addEventListener('click', function(){
     auPassage()
@@ -68,5 +70,5 @@ validation.addEventListener("click", function(){
 })
 
 function auPassage(){
-    titre1.classList.add("au-passage")
+    valeur1.classList.add("au-passage")
 }
