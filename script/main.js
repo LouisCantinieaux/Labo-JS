@@ -15,10 +15,8 @@ let tabRempli = []
 count = 0
 
 validation.addEventListener("click", function(){
-    //Envoi dans le local storage
     localStorage.setItem("maCommande", JSON.stringify(tab));
-
-    //Récupération depuis local storage
+    
     tabRempli = JSON.parse(localStorage.getItem("maCommande"));
 
     for(let i = 0; i < tabRempli.length; i++){
