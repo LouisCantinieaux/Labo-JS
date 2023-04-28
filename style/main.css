@@ -4,28 +4,50 @@ header{
 }
 header > p{
     color: white;
+    text-align: center;
+    margin-top: 0;
+}
+body{
+    height: 100vh;
+    margin: 0;
 }
 footer{
     background-color: black;
 }
 /*CSS sur les listes*/
-.liste > li{
-    list-style: none;
-    display: block;
+.liste{
+    display: inline;
+    text-align: center;
     margin: 0px;
-}
-ul > li{
+    padding: 0px;
+    margin-left: 25%;
+    width: 50%;
+    border: 20px;
+    border-color: coral;
     color: white;
 }
+.liste > li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+   padding: 2%;
+}
+
+/* #carte-interactive > li{
+    color: black;
+} */
 
 /*CSS sur les titres et sous-titres*/
 h1{
     color: red;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 #disclaimer{
     color: rgba(192, 192, 21, 0.833);
     text-decoration: underline;
+    text-align: center;
 }
 
 /*CSS sur les Liens*/
@@ -33,6 +55,7 @@ h1{
     color: orange;
     text-decoration: none;
     outline: none;
+    
 }
 a{
     

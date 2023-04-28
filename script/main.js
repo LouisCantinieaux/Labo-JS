@@ -6,12 +6,11 @@ menu[3]="<ul><li>4.1</li><li>4.2</li></ul>";
 
 let liste;
 
-let index = -1;
+let index = 0;
 let ligne ="";
 
 function init(){
     liste = document.getElementById("carte").getElementsByTagName("li");
-
 }
 
 function debut(i){

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/asset/img/favicon-pizza.jpg" rel="icon" type="icon">
     <link href="/style/main.css" rel="stylesheet" type="text/css">
+    <script src="../script/main.js"></script>
     <title>Notre carte</title>
 </head>
 <header>
@@ -19,18 +20,15 @@
         <li><a href="contact.html" class="menu">Contact</a></li>
     </ul>
 </header>
-<body>
-    <body onload="init()">
-        <p id="menuStyle">
-            <strong>MENU</strong>
-        </p>
+<body onload="init()">
+        <h2>MENU</h2>
         
         <div id="carte">
-            <ul>
-                <li><a href="#" onClick="debut(3)">Pizza Capriciosa</a></li>
-                <li><a href="#" onClick="debut(2)"></a>Pizza Napolitaine</li>
-                <li><a href="#" onClick="debut(1)"></a>Calzone au jambon</li>
-                <li><a href="#" onClick="debut(0)"></a>Pizza Hawaï</li>
+            <ul id="carte-interactive">
+                <li><a href="#" onClick="debut(0)">Pizza Capriciosa</a></li>
+                <li><a href="#" onClick="debut(1)"></a>Pizza Napolitaine</li>
+                <li><a href="#" onClick="debut(2)"></a>Calzone au jambon</li>
+                <li><a href="#" onClick="debut(3)"></a>Pizza Hawaï</li>
             </ul>
         </div>
 </body>
