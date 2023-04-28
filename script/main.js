@@ -1,28 +1,3 @@
-let menu = [];
-menu[0]="<ul><li>1.1</li><li>1.2</li></ul>";
-menu[1]="<ul><li>2.1</li><li>2.2</li></ul>";
-menu[2]="<ul><li>3.1</li><li>3.2</li><li>3.3</li><li>3.4</li></ul>";
-menu[3]="<ul><li>4.1</li><li>4.2</li></ul>";
-
-const validation = document.getElementById("validation");
-let liste;
-let tabRempli = [];
-let index = 0;
-let ligne ="";
-
-function init(){
-    liste = document.getElementById("carte").getElementsByTagName("li");
-}
-
-function debut(i){
-    if(index >= 0){
-        liste[i].innerHTML = ligne;
-    }
-    ligne = liste[i].innerHTML;
-    index = i;
-    liste[i].innerHTML += menu[i];
-}
-
 validation.addEventListener("click", function(){
     //Envoi dans le local storage
     localStorage.setItem("maCommande", JSON.stringify(menu));
@@ -34,3 +9,71 @@ validation.addEventListener("click", function(){
         console.log("élément" + i + " " + tabRempli[i]);
     }
 })
+
+
+let valeur1 = document.getElementById("valeur-1")
+let valeur2 = document.getElementById("valeur-2")
+let valeur3 = document.getElementById("valeur-3")
+let valeur4 = document.getElementById("valeur-4")
+let valeur5 = document.getElementById("valeur-5")
+let valeur6 = document.getElementById("valeur-6")
+
+let validation = document.getElementById("validation")
+
+let tab = []
+let tabRempli = []
+count = 0
+
+titre1.addEventListener("mouseover", function(){
+    // executer mon code lorque je click sur le titre 1
+    auPassage()
+    count ++
+    console.log(count)
+})
+
+valeur1.addEventListener('click', function(){
+    auPassage()
+    tab.push(valeur1.innerText)
+})
+
+valeur2.addEventListener('click', function(){
+    auPassage()
+    tab.push(valeur2.innerText)
+})
+
+valeur3.addEventListener('click', function(){
+    auPassage()
+    tab.push(valeur3.innerText)
+})
+
+valeur4.addEventListener('click', function(){
+    auPassage()
+    tab.push(valeur4.innerText)
+})
+
+valeur5.addEventListener('click', function(){
+    auPassage()
+    tab.push(valeur5.innerText)
+})
+
+valeur6.addEventListener('click', function(){
+    auPassage()
+    tab.push(valeur6.innerText)
+})
+
+validation.addEventListener("click", function(){
+    // Envoie dans le local storage
+    localStorage.setItem("monTableau", JSON.stringify(tab))
+
+
+    // Récupération depuis le local storage (peut se faire après rechargemernt de page)
+    tabRempli = JSON.parse(localStorage.getItem("monTableau"))
+
+    for (let i = 0; i < tabRempli.length; i++) {
+        console.log("élément " + i + " " + tabRempli[i])
+    }
+})
+
+function auPassage(){
+    titre1.classList.add("au-passage")
+}
